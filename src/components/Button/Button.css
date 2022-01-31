@@ -1,0 +1,36 @@
+.button {
+  color: #fff;
+  transition: filter 0.2s ease-in-out;
+}
+
+.button:hover {
+  filter: brightness(0.9);
+}
+
+.button-primary {
+  background: #f231a5;
+}
+
+.button-secondary {
+  background: #3cd3c1;
+}
+
+.button-outline {
+  border: 1px solid #f231a5;
+  background: none;
+  color: #f231a5;
+}
+
+.button-small {
+  height: 39px;
+  width: 120px;
+}
+
+.button-medium {
+  height: 42px;
+  width: 183px;
+}
+
+.button-fullWidth {
+  width: 100%;
+}
