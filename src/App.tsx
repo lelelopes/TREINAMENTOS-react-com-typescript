@@ -1,50 +1,65 @@
 import './App.css'
-import { Button } from './components/Button'
 
-function handleClick(name: string, age: number) {
-  console.log(`Me chama ${name} e tenho ${age} anos`)
-}
+import { ToolsBox, ToolsBoxProps } from './components/ToolsBox'
+
+const tools = {
+  tools: [
+    {
+      src: 'https://my-portfolio-d3vlopes.vercel.app/_next/image?url=https%3A%2F%2Fmedia.graphcms.com%2F6ECm7pvnSIe3hGdVUy2f&w=48&q=75',
+      name: 'React',
+    },
+    {
+      src: 'https://my-portfolio-d3vlopes.vercel.app/_next/image?url=https%3A%2F%2Fmedia.graphcms.com%2Fmsa7RKJyTKaJYtFy5EbE&w=48&q=75',
+      name: 'NextJS',
+    },
+    {
+      src: 'https://my-portfolio-d3vlopes.vercel.app/_next/image?url=https%3A%2F%2Fmedia.graphcms.com%2Fw1laiqUSzqcQbUwUikcA&w=48&q=75',
+      name: 'TypeScript',
+    },
+    {
+      src: 'https://my-portfolio-d3vlopes.vercel.app/_next/image?url=https%3A%2F%2Fmedia.graphcms.com%2FCLrqVkjLQEK2ZtAO81Ny&w=48&q=75',
+      name: 'Storybook',
+    },
+    {
+      src: 'https://my-portfolio-d3vlopes.vercel.app/_next/image?url=https%3A%2F%2Fmedia.graphcms.com%2Fsm2hQvPQgugVjL8FHcPl&w=48&q=75',
+      name: 'Jest',
+    },
+    {
+      src: 'https://my-portfolio-d3vlopes.vercel.app/_next/image?url=https%3A%2F%2Fmedia.graphcms.com%2FQFiOgFCjQra5586AV85q&w=48&q=75',
+      name: 'Testing Library',
+    },
+    {
+      src: 'https://my-portfolio-d3vlopes.vercel.app/_next/image?url=https%3A%2F%2Fmedia.graphcms.com%2FFDjurBksSpeB31bCFZER&w=48&q=75',
+      name: 'Node',
+    },
+    {
+      src: 'https://my-portfolio-d3vlopes.vercel.app/_next/image?url=https%3A%2F%2Fmedia.graphcms.com%2F7k4CzuPSSNiFNuyHXidd&w=48&q=75',
+      name: 'GraphQL',
+    },
+    {
+      src: 'https://my-portfolio-d3vlopes.vercel.app/_next/image?url=https%3A%2F%2Fmedia.graphcms.com%2FlmuBJk6Q1ei6FnjthUTp&w=48&q=75',
+      name: 'HTML 5',
+    },
+    {
+      src: 'https://my-portfolio-d3vlopes.vercel.app/_next/image?url=https%3A%2F%2Fmedia.graphcms.com%2FC3L61gOcTJeR9fOoOPRx&w=48&q=75',
+      name: 'CSS 3',
+    },
+    {
+      src: 'https://my-portfolio-d3vlopes.vercel.app/_next/image?url=https%3A%2F%2Fmedia.graphcms.com%2FKIGeEYfETXKfvl4QsEIV&w=48&q=75',
+      name: 'JavaScript',
+    },
+    {
+      src: 'https://my-portfolio-d3vlopes.vercel.app/_next/image?url=https%3A%2F%2Fmedia.graphcms.com%2FmoZhqEbpQRWkY4VE0x2z&w=48&q=75',
+      name: 'Git',
+    },
+  ],
+} as ToolsBoxProps
 
 function App() {
   return (
     <div className="App">
-      {/* Utiliza os valores padrão */}
-      <Button onClick={() => handleClick('Leandro Lopes', 27)}>Button</Button>
-
-      {/* variant secondary */}
-      <Button
-        variant="secondary"
-        onClick={() => handleClick('Leandro Lopes', 27)}
-      >
-        Button
-      </Button>
-
-      {/* variant outline */}
-      <Button
-        variant="outline"
-        onClick={() => handleClick('Leandro Lopes', 27)}
-      >
-        Button
-      </Button>
-
-      {/* size small */}
-      <Button size="small" onClick={() => handleClick('Leandro Lopes', 27)}>
-        Button
-      </Button>
-
-      {/* size medium */}
-      <Button
-        variant="secondary"
-        size="medium"
-        onClick={() => handleClick('Leandro Lopes', 27)}
-      >
-        Button
-      </Button>
-
-      {/* full width */}
-      <Button fullWidth onClick={() => handleClick('Leandro Lopes', 27)}>
-        Button
-      </Button>
+      <h1>Minha caixa de ferramentas</h1>
+      <ToolsBox {...tools} />
     </div>
   )
 }
