@@ -19,7 +19,6 @@ export const Button = ({
   size = 'medium',
   fullWidth = false,
   onClick,
-
   ...props
 }: ButtonProps) => {
   return (
