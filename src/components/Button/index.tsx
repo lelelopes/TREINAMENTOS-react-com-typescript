@@ -23,9 +23,9 @@ export const Button = ({
 }: ButtonProps) => {
   return (
     <button
-      className={`button button-${variant} ${
-        variant === 'outline'
-      } button-${size} ${fullWidth ? 'button-fullWidth' : ''}`}
+      className={`button button-${variant}  button-${size} ${
+        fullWidth ? 'button-fullWidth' : ''
+      }`}
       onClick={onClick}
       {...props}
     >
